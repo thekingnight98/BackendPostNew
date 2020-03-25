@@ -46,7 +46,7 @@ router.post('/add', upload.single('profileImg'), (req, res) => {
         title: req.body.title,
         detail: req.body.detail,
         category: req.body.category,
-        tags: req.body.tags.map(tag => tag.text),
+        tags: req.body.tags.map(tag => tag),
         // profileImg: url + '/public/' + req.file.filename
         profileImg: req.body.profileImg
 
